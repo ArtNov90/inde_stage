@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Qui sommes-nous?{% endblock %}
+
+{% block body %}
+    <div class="container-fluid py-5" style="background-color: #B0413E">
+        <div class="container">
+            <h1 class="text-center text-light">Qui sommes-nous?</h1>
+            <h3 class="text-center text-light ">Nos actions sont axées sur l’éducation des enfants.</h3>
+
+            <div class="row my-4">
+                <div class="col-md-6 mb-3">
+                    <img src="{{ asset('img/children-306607_640.jpg') }}" alt="Description de l'image 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p class="fs-5 border rounded p-3 bg-white">
+                        INDE EDUC’ACTIONS est une association française loi 1901 créée en 2006, basée à Jacou, tout près de Montpellier. Elle est issue d’une association plus ancienne qui intervenait en Inde et à Madagascar. Reconnue à but humanitaire en 2007, elle est administrée par un conseil d’administration et un bureau. Tous les intervenants sont bénévoles, l’association n’emploie pas de salariés en France. Nos frais de fonctionnement en France sont extrêmement faibles, de l’ordre de 2% du montant des dons collectés.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-4 flex-column-reverse flex-md-row">
+                <div class="col-md-6 mb-3">
+                    <p class="fs-5 border rounded p-3 bg-white">
+                        Depuis quelques années, la législation indienne impose aux associations étrangères de travailler avec un partenaire local, titulaire du FCRA (Foreing Contribution Regulation Act). Cette accréditation du gouvernement fédéral est indispensable pour recevoir des fonds de l’étranger. Son obtention est soumise à un contrôle extrêmement rigoureux et nécessite de rendre compte de l’emploi de chaque euro reçu. C’est ainsi que nous coopérons étroitement avec l’ONG indienne « IEA TRUST » basée à Pondichéry qui a obtenu cette accréditation en 2018, gage de son sérieux et de sa compétence. L’équipe d’IEA TRUST se compose d’une directrice, d’un responsable comptable et administratif et de deux travailleuses sociales. Tous sont d’anciens filleuls(es) d’Inde Educ’Actions qui connaissent parfaitement le milieu socio-économique dans lequel ils interviennent, ainsi que la culture et les besoins des populations aidées. L’équipe pédagogique compte une quinzaine de professeurs employés à temps partiel dans cinq Tuitions Centers. Ces centres de soutien scolaire accueillent environ 250 enfants chaque soir après l’école.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('img/children-876543_640.jpg') }}" alt="Description de l'image 2" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col-md-6 mb-3">
+                    <img src="{{ asset('img/woman-755227_640.jpg') }}" alt="Description de l'image 3" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p class="fs-5 border rounded p-3 bg-white">
+                        Nous intervenons auprès de personnes Hors castes, autrefois appelées Intouchables et aujourd’hui Dalits et des plus basses castes. La constitution indienne de 1950 a interdit la discrimination entre les castes, mais elle ne les a pas abolies et ce système reste encore très prégnant aujourd’hui. Le sort des veuves est particulièrement difficile en Inde où l’organisation sociale est entièrement basée sur l’institution du mariage. Nous avons choisi de venir en aide aux femmes seules et en situation d’extrême pauvreté, en parrainant la scolarité d’un ou de plusieurs de leurs enfants. Nous parrainons également des enfants vivant en orphelinat, qu’ils soient orphelins ou abandonnés. Pour ces populations dans le plus total dénuement, l’éducation est le seul moyen de sortir de leur condition misérable. Notre objectif : « Offrir aux enfants la possibilité de bien grandir et de construire leur vie au lieu de la subir »
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col text-center">
+                    <div class="jumbotron bg-light py-4">
+                        <h2>Parrainez un enfant</h2>
+                        <p>Ensemble, nous pouvons faire une différence. L'association est à but humanitaire, vos dons donnent accès à des réductions d'impôt.</p>
+                        <a href="{{ path('app_register') }}" class="btn btn-primary btn-lg">Faire un don</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

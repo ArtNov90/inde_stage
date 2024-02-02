@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos actions{% endblock %}
+
+{% block body %}
+    <div class="container-fluid py-5" style="background-color: #B0413E">
+        <div class="container">
+            <h1 class="text-center text-light">Nos actions</h1>
+            <h3 class="text-center text-light">Nous accompagnons les enfants pendant toute leur scolarité et jusqu’à l’université pour certains.</h3>
+
+            <div class="row my-4">
+                <div class="col-md-6 mb-3">
+                    <img src="{{ asset('img/child-7047288_640.jpg') }}" alt="Description de l'image 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p class="fs-5 border rounded p-3 bg-white">
+                        Les dons et parrainages permettent :
+                        La scolarisation dans une école privée, publique ou semi-publique, selon le choix de la mère de famille.
+                        Des bourses pour étudiants, en complément de celles accordées par le gouvernement.
+                        La prise en charge de frais annexes : uniformes, livres, papeterie, transport.
+                        Des aides aux devoirs (tuitions) qui permettent aux enfants du quartier de faire chaque soir leurs devoirs et apprendre leurs leçons dans de bonnes conditions matérielles, sous la tutelle d’enseignants.
+                        Des camps d’été qui permettent de réviser et renforcer les acquis scolaires mais aussi de pratiquer des activités ludiques, artistiques, culturelles et sportives.
+                        Des contrôles médicaux annuels pour vérifier les yeux, les oreilles et les dents.
+                        L’aide à l’autonomisation des mères de famille (empowerment) : information sur leurs droits, sur les différentes aides offertes par le gouvernement indien et autres sujets relatifs à l’éducation et la santé, avec l’intervention ponctuelle d’intervenants extérieurs.
+                        La distribution de nourriture et de produits d’hygiène, ponctuellement en fonction des besoins.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-4 flex-column-reverse flex-md-row">
+                <div class="col-md-6 mb-3">
+                    <p class="fs-5 border rounded p-3 bg-white">
+                        Quelques chiffres :
+                        250 enfants parrainés.
+                        Plus d’une cinquantaine de bourses étudiants.
+                        250 enfants accueillis chaque jour dans 5 Tuitions Centers basés à Pondichéry, les villages alentours ainsi qu’à Karaikal.
+                        Ces aides sont particulièrement nécessaires en période post-Covid. Après deux ans d’une scolarisation chaotique, voire inexistante*, les enfants ont accumulé des lacunes qu’il faut combler.
+                        Les demandes d’inscription ne cessent d’augmenter !
+                        * La majorité des familles ne disposait pas des outils numériques nécessaires pour suivre les cours en ligne.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('img/children-7047132_640.jpg') }}" alt="Description de l'image 2" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col-md-6 mb-3">
+                    <img src="{{ asset('img/img.png') }}" alt="Description de l'image 3" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <p class="fs-5 border rounded p-3 bg-white">
+                        Nos lieux et sites d’intervention :
+                        Nous avons 3 antennes historiques, basées dans le Sud-Est de l’Inde, dans le Territoire de Pondichery et l’Etat du Tamil Nadu :
+                        Pondichéry et ses environs pour 90% des bénéficiaires.
+                        Chennai, anciennement Madras, 4ème ville de l’Inde où nous suivons des enfants issus d’un bidonville aujourd’hui démantelé.
+                        Karaikal et ses environs. Cette antenne a été créée après le tsunami de décembre 2004 pour venir en aide aux familles de pêcheurs.
+                        Compte tenu de l’éloignement géographique et des difficultés d’intervention à distance, nous axons désormais notre développement sur l’antenne de Pondichéry.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row my-4">
+                <div class="col text-center">
+                    <div class="jumbotron bg-light py-4">
+                        <h2>Parrainez un enfant</h2>
+                        <p>Ensemble, nous pouvons faire une différence. L'association est à but humanitaire, vos dons donnent accès à des réductions d'impôt.</p>
+                        <a href="{{ path('app_register') }}" class="btn btn-primary btn-lg">Faire un don</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

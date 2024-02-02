@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous rejoindre{% endblock %}
+
+{% block header %}
+    <header>
+        {# read and display all flash messages #}
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </header>
+{% endblock %}
+
+{% block body %}
+
+
+    <main class="d-flex justify-content-center align-item-center bg-image " style="min-height: 100vh; display: flex; align-items: center;background-image: url('{{ asset('img/Inde-mains.jpg') }}');">
+        <div class="container p-3 rounded shadow" style="background-color: #B0413E; padding: 20px; max-width: 600px;">
+
+            <h1>Nous rejoindre</h1>
+
+            <div>Quand vous parrainez un enfant vous êtes en relation avec lui.
+                Vous recevez deux fois par an de ses nouvelles et ses résultats scolaires annuels.
+                Vous pouvez aussi le rencontrer à l’occasion d’un voyage en Inde.Après votre adhésion nous vous envoyons une fiche d’inscription ainsi
+                qu’une fiche de présentation de l’enfant ou de l’étudiant parrainé.</div>
+
+
+        {{ form_start(donateurForm, {'attr': {'class': 'form-signin'}}) }}
+
+        <div class="form-group">
+            {{ form_label(donateurForm.nom) }}
+            {{ form_widget(donateurForm.nom, {'attr': {'class': 'form-control', 'placeholder': 'Nom'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(donateurForm.prenom) }}
+            {{ form_widget(donateurForm.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Prénom'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(donateurForm.email) }}
+            {{ form_widget(donateurForm.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(donateurForm.telephone) }}
+            {{ form_widget(donateurForm.telephone, {'attr': {'class': 'form-control', 'placeholder': 'Téléphone'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(donateurForm.adresse) }}
+            {{ form_widget(donateurForm.adresse, {'attr': {'class': 'form-control', 'placeholder': 'Adresse'}}) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(donateurForm.peutSeRendreEnInde) }}
+            {{ form_widget(donateurForm.peutSeRendreEnInde, {'placeholder': 'Choix par défaut'}) }}
+        </div>
+
+        <div class="form-group ">
+            {{ form_label(donateurForm.TypeDeParrainage) }}
+            {{ form_widget(donateurForm.TypeDeParrainage, {
+                'attr': {
+                    'class': 'form-control',
+                },
+                'choice_attr': {
+                    'Parrainage de la scolarité d’un enfant': {'data-description': '25 €/mois'},
+                    'Bourse pour un étudiant': {'data-description': '25 €/mois'},
+                    'Financement des soutiens scolaires': {'data-description': 'à partir de 10€/mois'},
+                    'Dons ponctuels': {'data-description': 'versements libres'},
+                },
+            }) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(donateurForm.motivation) }}
+            {{ form_widget(donateurForm.motivation, {'attr': {'class': 'form-control', 'placeholder': 'Motivation'}}) }}
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">S'inscrire</button>
+
+        {{ form_end(donateurForm) }}
+        </div>
+    </main>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <div>&copy; {{ "now"|date("Y") }} Inde Education action</div>
+    </footer>
+{% endblock %}

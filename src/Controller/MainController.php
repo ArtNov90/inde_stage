@@ -8,11 +8,40 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
- #[Route('/')]
-  public function home()
+ #[Route('/formulaire')]
+  public function formulaire(): Response
 
-      {
-          return $this->render('main/home.html.twig');
+ {
+          return $this->render('main/formulaire.html.twig');
       }
 
+    #[Route('/about')]
+    public function about(): Response
+
+    {
+        return $this->render('main/about.html.twig');
+    }
+    #[Route('/home')]
+    public function home(): Response
+
+    {
+        return $this->render('main/home.html.twig');
+    }
+    #[Route('/profil')]
+    public function profil(): Response
+
+    {
+        return $this->render('main/profil.html.twig');
+    }
+
+    #[Route('/action')]
+    public function action(): Response
+
+    {
+        return $this->render('main/action.html.twig');
+    }
+
 }
+
+
+

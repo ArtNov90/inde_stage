@@ -1,0 +1,22 @@
+/* Réinitialisation des marges et paddings par défaut */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Suppression des marges et paddings des sections */
+.section-class {
+    margin: 0;
+    padding: 0;
+}
+
+/* Si nécessaire, ajustez l'image de fond */
+.bg-image {
+    background-size: cover; /* Ajustement de la taille de l'image de fond */
+    background-position: center;
+}
+
+/* Gestion du débordement de contenu */
+.container {
+    overflow: hidden; /* ou utilisez scroll ou auto si nécessaire */
+}

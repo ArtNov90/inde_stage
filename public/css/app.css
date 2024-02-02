@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B0413E;
+}
+/* Supprime les puces de liste et défini la mise en forme de la barre de navigation */
+
+header{
+    background-color:#B0413E;
+    color: #FFFFFF;
+}
+
+
+
+
+
+label{
+    display: block;
+    border-radius: 5px;
+}
+
+.flash{
+    padding: 20px;
+    font-weight: bold;
+    font-size:1.4rem ;
+    margin:1rem 0 ;
+    border-radius: 5px;
+}
+
+.flash-success{background-color: #93c5fd}
+
+/* Conteneur du formulaire */
+.form-container {
+    display: flex;
+    justify-content: space-between; /* Aligne les champs horizontalement */
+}
+
+/* Styles pour les champs individuels */
+.form-container input, .form-container textarea {
+    flex: 1; /* Permet aux champs de s'étirer pour remplir l'espace disponible */
+}
+
+.bg-image{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: optimizeQuality;
+}
+
+.footer {
+    position: relative; /* Changez la position à relative */
+    width: 100%;
+    margin-top: auto; /* Pour pousser le footer en bas */
+    background-color: #f8f9fa; /* Ajoutez la couleur de fond souhaitée */
+}
+.hero.jumbotron {
+    min-height: 80vh; /* Ajustez la taille en fonction de votre contenu et de la taille souhaitée */
+    padding: 50px; /* Ajustez le rembourrage selon vos besoins */
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-custom {
+    background-color: #B0413E;
+}
+.border-custom {
+    border-color: #B0413E;
+}
+
+
+     /* CSS pour les liens */
+
+
+
+/* Styles pour les autres liens */
+.navbar-nav .nav-link {
+    color: yellow;
+}
+
+/* Changer la couleur des liens lorsque survolés */
+.navbar-nav .nav-link:hover {
+    color: orange; /* Optionnel : changer la couleur au survol */
+}
+
+
+
+
+

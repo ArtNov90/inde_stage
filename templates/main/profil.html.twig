@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Profil de {{ donateur.prenom }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="form-container d-flex justify-content-center align-item-center bg-image " style="min-height: 100vh; display: flex; align-items: center;background-image: url('{{ asset('img/temple-1166023_1280.jpg') }}');">
+        <div class="d-flex flex-column p-3 rounded shadow" style="background-color: #B0413E; padding: 20px; max-width: 600px;"> {# Utilise des classes Bootstrap pour créer une colonne flexible #}
+            <h3>Profil de {{ donateur.prenom }} </h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Nom :</strong> {{ donateur.nom }}</li>
+                <li class="list-group-item"><strong>Prénom :</strong> {{ donateur.prenom }}</li>
+                <li class="list-group-item"><strong>Email :</strong> {{ donateur.email }}</li>
+                <li class="list-group-item"><strong>Téléphone :</strong> {{ donateur.telephone }}</li>
+                <li class="list-group-item"><strong>Adresse :</strong> {{ donateur.adresse }}</li>
+                <li class="list-group-item"><strong>Se rendre en Inde :</strong>  {% if donateur.peutSeRendreEnInde %}
+                        Oui
+                    {% else %}
+                        Non
+                    {% endif %}
+                </li>
+                {% set typeDeParrainageMapping = {
+                    'Parrainage de la scolarité d’un enfant': '25 €/mois',
+                    'Bourse pour un étudiant': '25 €/mois',
+                    'Financement des soutiens scolaires': 'à partir de 10€/mois',
+                    'Dons ponctuels': 'versements libres'
+                } %}
+                <li class="list-group-item"><strong>Type de parrainage :</strong>
+                    {% if donateur.typeDeParrainage == 1 %}
+                        Parrainage de la scolarité d’un enfant
+                    {% elseif donateur.typeDeParrainage == 0 %}
+                        Bourse pour un étudiant
+                    {% else %}
+                        Choix non spécifié
+                    {% endif %}
+                </li>
+            </ul>
+
+            <div class="mt-3"> {# Ajoutez de l'espace (marge) entre la liste et le bouton #}
+                <div class="form-actions">
+                    <a href="{{ path('app_main_home') }}" class="btn btn-primary">Retour</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+

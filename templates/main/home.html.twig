@@ -1,13 +1,53 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Acceuil</h1>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <section class="hero jumbotron  text-center text-white bg-image-50" style="background-image: url('{{ asset('img/school-298680_1920.jpg') }}');">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4">Bienvenue sur Inde Éduc'Actions</h1>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <h2>Inde Éduc'Actions s'engage à améliorer l'accès à l'éducation en Inde. Nous croyons en un avenir meilleur grâce à l'éducation.</h2>
+                </div>
+            </div>
+            <div class="row mt-5 justify-content-center">
+                <div class="col-md-4 text-center border border-2 border-danger rounded p-4 bg-warning" style="--bs-bg-opacity: .5;"> <!-- Utilisation des classes Bootstrap pour encadrer la section et changer la couleur de fond et de bordure -->
+                    <h2>Parrainez un enfant</h2>
+                    <p>Ensemble, nous pouvons faire une différence.</p>
+                    <a href="{{ path('app_register') }}" class="btn btn-primary btn-lg">Faire un don</a>
+                </div>
+                <!-- Ajoutez deux autres blocs similaires avec les classes Bootstrap -->
+                <div class="col-md-4 text-center border border-2 border-danger rounded p-4 bg-warning" style="--bs-bg-opacity: .5;">
+                    <h2>Notre Mission</h2>
+                    <p>Notre mission est de soutenir l'éducation en Inde.</p>
+                    <a href="{{ path('app_main_about') }}" class="btn btn-primary btn-lg">En savoir plus</a>
+                </div>
+                <div class="col-md-4 text-center border border-2 border-danger rounded p-4 bg-warning" style="--bs-bg-opacity: .5;">
+                    <h2>Nos actions</h2>
+                    <p>Nos actions sont axées sur l’éducation des enfants.</p>
+                    <a href="{{ path('app_main_action') }}" class="btn btn-primary btn-lg">Actions</a>
+                </div>
+            </div>
+            <!-- Bloc de texte centré horizontalement -->
+            <div class="row mt-5">
+                <div class="col-md-6 offset-md-3">
+                    <div class="p-4 bg-danger text-white" style="--bs-bg-opacity: .5;">
+                        <h2 class="text-center">L'association est à but humanitaire, vos dons donnent accès à des réductions d'impôt.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+

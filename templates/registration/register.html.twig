@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer mon compte{% endblock %}
+
+{% block body %}
+
+    <section class="bg-image" style="min-height: 100vh; display: flex; align-items: center;background-image: url('{{ asset('img/Inde-mains.jpg') }}');">>
+    <div class="container p-3 rounded shadow" style="background-color: #B0413E; padding: 20px; max-width: 600px;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="mt-5">Créer un compte</h1>
+                <div class="info">Vous pouvez créer un compte et recevoir des newsletter des de nos actions sur le terrain</div><hr>
+
+                {{ form_errors(registrationForm) }}
+
+                {{ form_start(registrationForm, {'attr': {'class': 'form-signin'}}) }}
+                {{ form_row(registrationForm.nom, {'attr': {'class': 'form-control', 'placeholder': 'Nom'}}) }}
+                {{ form_row(registrationForm.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Prénom'}}) }}
+                {{ form_row(registrationForm.email, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+                {{ form_row(registrationForm.plainPassword, {
+                    'label': 'Password',
+                    'attr': {'class': 'form-control', 'placeholder': 'Password'}
+                }) }}
+                <div class="form-check">
+                    {{ form_row(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
+                    {{ form_label(registrationForm.agreeTerms, 'I agree to the terms', {'label_attr': {'class': 'form-check-label'}}) }}
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+    </section>
+{% endblock %}
+

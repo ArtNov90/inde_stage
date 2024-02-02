@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'identifier{% endblock %}
+
+{% block body %}
+<form class="container col-md-6 offset-md-3"  method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            Vous êtes enregistré en tant que {{ app.user.userIdentifier }}, <a href="{{ path('app_main_home') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <main class="d-flex justify-content-center align-item-center bg-image " style="min-height: 100vh; display: flex; align-items: center;margin-top:8px;background-image: url('{{ asset('img/temple-1166023_1280.jpg') }}');background-size: cover; background-position: center;">
+        <div class="container p-3 rounded shadow" style="background-color: #B0413E; padding: 20px; max-width: 600px;">
+
+    <h1 class="h3 mb-3 font-weight-normal">S'identifier</h1>
+    <label for="inputEmail">Email</label>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+    <label for="inputPassword">Mot de passe</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}">
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" name="_remember_me">Se rappeler de moi
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary" type="submit">
+        S'enregistrer
+    </button>
+
+    <div>
+        <a href="{{ path('app_forgot_password_request') }}" title="reset password">Mot de passe oublié ?</a>
+    </div>
+        </div>
+    </main>
+</form>
+
+
+{% endblock %}
